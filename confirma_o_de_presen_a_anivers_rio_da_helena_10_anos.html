@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário de 10 Anos da Helena | País das Maravilhas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alice: {
+                            blue: '#6cb2eb',
+                            deep: '#2b4c7e',
+                            light: '#e0f2fe',
+                            gold: '#d4af37',
+                            purple: '#7e57c2',
+                            pink: '#ec4899',
+                            cream: '#fdfbf7'
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Cinzel', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                        sans: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos e animações personalizadas do País das Maravilhas */
+        body {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4c1d95 100%);
+            font-family: 'Nunito', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .wonderland-card {
+            background: rgba(255, 255, 255, 0.93);
+            backdrop-filter: blur(10px);
+            border: 2px solid #d4af37;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Efeitos de flutuação */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        @keyframes float-reverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(15px) rotate(-5deg); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); }
+        }
+
+        .animate-float-1 { animation: float-slow 6s ease-in-out infinite; }
+        .animate-float-2 { animation: float-reverse 7s ease-in-out infinite; }
+        .animate-float-3 { animation: float-slow 8s ease-in-out 1s infinite; }
+        .glow-button { animation: pulse-glow 3s infinite; }
+
+        /* Borda decorativa de baralho */
+        .card-border-decoration {
+            background-image: radial-gradient(#d4af37 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #e5be48 0%, #c48b26 100%);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between relative py-6 px-4 sm:px-6">
+
+    <!-- Elementos Flutuantes Mágicos (SVGs em Background) -->
+    <div class="fixed top-10 left-5 opacity-20 md:opacity-30 pointer-events-none animate-float-1 z-0">
+        <!-- Relógio de Bolso -->
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+            <circle cx="12" cy="13" r="8"/>
+            <path d="M12 9v4l3 2"/>
+            <path d="M12 5V3m-2 0h4"/>
+        </svg>
+    </div>
+
+    <div class="fixed top-1/4 right-6 opacity-20 md:opacity-30 pointer-events-none animate-float-2 z-0">
+        <!-- Carta de Baralho (Ás de Copas) -->
+        <svg width="70" height="90" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.5">
+            <rect x="3" y="2" width="18" height="20" rx="2"/>
+            <path d="M12 7c-1.5-2-4.5-1.5-4.5 1 0 2 4.5 5 4.5 5s4.5-3 4.5-5c0-2.5-3-3-4.5-1z" fill="#ec4899"/>
+        </svg>
+    </div>
+
+    <div class="fixed bottom-20 left-8 opacity-20 md:opacity-30 pointer-events-none animate-float-3 z-0">
+        <!-- Chave Dourada -->
+        <svg width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+            <path d="M21 2l-7.5 7.5"/>
+            <circle cx="7.5" cy="16.5" r="4.5"/>
+            <path d="M15.5 7.5L17 9m-2.5-4L16 6.5"/>
+        </svg>
+    </div>
+
+    <div class="fixed bottom-12 right-10 opacity-20 md:opacity-30 pointer-events-none animate-float-1 z-0">
+        <!-- Cartola do Chapeleiro -->
+        <svg width="85" height="85" viewBox="0 0 24 24" fill="none" stroke="#7e57c2" stroke-width="1.5">
+            <path d="M4 19h16M7 19v-9a3 3 0 013-3h4a3 3 0 013 3v9M7 14h10"/>
+        </svg>
+    </div>
+
+    <!-- Container Principal -->
+    <main class="max-w-3xl mx-auto w-full z-10 my-auto">
+        
+        <!-- Header / Hero Section -->
+        <header class="text-center mb-8">
+            <div class="inline-block mb-3 px-4 py-1.5 rounded-full bg-purple-900/60 border border-amber-400/40 text-amber-300 text-sm font-semibold tracking-wide">
+                ✨ CONVITE ESPECIAL ✨
+            </div>
+            
+            <h1 class="font-script text-5xl sm:text-7xl md:text-8xl text-amber-300 mb-1 drop-shadow-lg">
+                Helena
+            </h1>
+            
+            <div class="font-title text-xl sm:text-3xl text-white tracking-wider mb-3">
+                FAZ <span class="gold-gradient-text text-3xl sm:text-4xl font-extrabold">10 ANOS</span>
+            </div>
+
+            <p class="font-script text-2xl sm:text-3xl text-pink-300 max-w-xl mx-auto leading-relaxed">
+                "Siga o coelho branco e venha comemorar comigo no País das Maravilhas!"
+            </p>
+
+            <!-- Ícones decorativos centrais -->
+            <div class="flex justify-center items-center gap-4 mt-4 text-amber-400 text-lg">
+                <span>♦</span>
+                <span>♠</span>
+                <i class="fa-solid fa-crown text-amber-300 text-xl"></i>
+                <span>♥</span>
+                <span>♣</span>
+            </div>
+        </header>
+
+        <!-- Card de Informações da Festa -->
+        <div class="wonderland-card rounded-3xl p-6 sm:p-8 mb-8 text-center relative overflow-hidden">
+            <!-- Selo de Idade -->
+            <div class="absolute -top-10 -right-10 w-28 h-28 bg-amber-400 text-purple-950 font-title font-bold text-2xl flex items-end justify-start p-4 rotate-12 rounded-full shadow-md hidden sm:flex">
+                10★
+            </div>
+
+            <h2 class="font-title text-2xl sm:text-3xl text-indigo-950 mb-6 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-clock text-amber-600"></i> Detalhes da Festa
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-700">
+                <!-- Data -->
+                <div class="bg-indigo-50/70 p-4 rounded-2xl border border-indigo-100 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl mb-2 shadow">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <span class="text-xs uppercase font-bold text-indigo-500 tracking-wider">Data</span>
+                    <span class="font-title text-lg font-bold text-indigo-950">25 de Outubro</span>
+                    <span class="text-sm text-slate-500">Sábado</span>
+                </div>
+
+                <!-- Horário -->
+                <div class="bg-indigo-50/70 p-4 rounded-2xl border border-indigo-100 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center text-xl mb-2 shadow">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <span class="text-xs uppercase font-bold text-purple-500 tracking-wider">Horário</span>
+                    <span class="font-title text-lg font-bold text-indigo-950">16:00 Horas</span>
+                    <span class="text-sm text-slate-500">Hora do Chá! ☕</span>
+                </div>
+
+                <!-- Local -->
+                <div class="bg-indigo-50/70 p-4 rounded-2xl border border-indigo-100 flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-pink-600 text-white flex items-center justify-center text-xl mb-2 shadow">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="text-xs uppercase font-bold text-pink-500 tracking-wider">Local Mágico</span>
+                    <span class="font-title text-lg font-bold text-indigo-950">Salão das Maravilhas</span>
+                    <span class="text-sm text-slate-500">Rua dos Encantos, 1000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card do Formulário RSVP -->
+        <div class="wonderland-card rounded-3xl p-6 sm:p-10 relative">
+            <div class="text-center mb-8">
+                <span class="text-amber-600 font-bold tracking-widest text-xs uppercase">R.S.V.P.</span>
+                <h2 class="font-title text-3xl sm:text-4xl text-indigo-950 mt-1">Confirme sua Presença</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    Por favor, preencha as informações abaixo para confirmar sua presença com os pais da Helena.
+                </p>
+            </div>
+
+            <!-- Caixa de Alerta (Caso falte preencher) -->
+            <div id="errorAlert" class="hidden mb-6 p-4 rounded-xl bg-red-100 border border-red-400 text-red-700 text-sm flex items-center gap-3">
+                <i class="fa-solid fa-circle-exclamation text-lg flex-shrink-0"></i>
+                <span id="errorMessage">Por favor, preencha todos os campos obrigatórios.</span>
+            </div>
+
+            <form id="rsvpForm" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                
+                <!-- Nome Completo -->
+                <div>
+                    <label for="guestName" class="block text-sm font-bold text-indigo-950 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-user text-amber-600"></i> Nome Completo do Convidado *
+                    </label>
+                    <input 
+                        type="text" 
+                        id="guestName" 
+                        required 
+                        placeholder="Ex: Maria da Silva" 
+                        class="w-full px-4 py-3.5 rounded-xl border-2 border-indigo-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all text-slate-800 font-medium"
+                    />
+                </div>
+
+                <!-- Quantidade de Convidados e Código lado a lado -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Qtd de Convidados -->
+                    <div>
+                        <label for="guestCount" class="block text-sm font-bold text-indigo-950 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-users text-amber-600"></i> Qtd. de Pessoas (Com você) *
+                        </label>
+                        <select 
+                            id="guestCount" 
+                            required 
+                            class="w-full px-4 py-3.5 rounded-xl border-2 border-indigo-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all text-slate-800 font-medium bg-white"
+                        >
+                            <option value="1">1 Pessoa (Apenas eu)</option>
+                            <option value="2">2 Pessoas</option>
+                            <option value="3">3 Pessoas</option>
+                            <option value="4">4 Pessoas</option>
+                            <option value="5">5 Pessoas</option>
+                            <option value="6">6 Pessoas ou mais</option>
+                        </select>
+                    </div>
+
+                    <!-- Código do Convite -->
+                    <div>
+                        <label for="inviteCode" class="block text-sm font-bold text-indigo-950 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-key text-amber-600"></i> Código do Convite *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="inviteCode" 
+                            required 
+                            placeholder="Ex: HELENA10" 
+                            class="w-full px-4 py-3.5 rounded-xl border-2 border-indigo-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all text-slate-800 font-medium uppercase"
+                        />
+                    </div>
+                </div>
+
+                <!-- Configuração / Número do WhatsApp do Destinatário -->
+                <div class="bg-amber-50/80 p-4 rounded-2xl border border-amber-200/80">
+                    <label for="whatsappNumber" class="block text-xs font-bold uppercase text-amber-900 mb-1 flex items-center justify-between">
+                        <span><i class="fa-brands fa-whatsapp text-green-600 text-sm mr-1"></i> Número de WhatsApp dos Pais (Destinatário)</span>
+                        <span class="text-[10px] text-amber-700 font-normal">(Editável para testes)</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="whatsappNumber" 
+                        value="5531999999999" 
+                        placeholder="Ex: 5531999999999" 
+                        class="w-full px-3 py-2 text-sm rounded-lg border border-amber-300 focus:border-amber-500 outline-none text-slate-700 bg-white"
+                    />
+                    <p class="text-[11px] text-slate-500 mt-1">Coloque o número com DDD (Exemplo: 55 + DDD + Número).</p>
+                </div>
+
+                <!-- Botão de Confirmação -->
+                <button 
+                    type="submit" 
+                    class="w-full gold-button glow-button text-slate-950 font-title font-bold text-lg py-4 px-6 rounded-2xl shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 tracking-wide"
+                >
+                    <i class="fa-brands fa-whatsapp text-2xl text-green-950"></i>
+                    CONFIRMAR VIA WHATSAPP
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-indigo-200/70 text-xs sm:text-sm mt-8 z-10">
+        <p>Aniversário de 10 Anos da Helena • País das Maravilhas 🎩✨</p>
+    </footer>
+
+    <!-- Lógica em JS Puro -->
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Elementos
+            const nameInput = document.getElementById('guestName');
+            const countInput = document.getElementById('guestCount');
+            const codeInput = document.getElementById('inviteCode');
+            const phoneInput = document.getElementById('whatsappNumber');
+            const errorAlert = document.getElementById('errorAlert');
+
+            // Valores
+            const name = nameInput.value.trim();
+            const count = countInput.value;
+            const code = codeInput.value.trim();
+            let phone = phoneInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+            // Validação simples
+            if (!name || !count || !code) {
+                errorAlert.classList.remove('hidden');
+                document.getElementById('errorMessage').innerText = 'Por favor, preencha todos os campos obrigatórios!';
+                return;
+            }
+
+            if (!phone || phone.length < 10) {
+                errorAlert.classList.remove('hidden');
+                document.getElementById('errorMessage').innerText = 'Por favor, insira um número de WhatsApp válido com DDD.';
+                return;
+            }
+
+            // Ocultar alerta se tudo estiver ok
+            errorAlert.classList.add('hidden');
+
+            // Montar a mensagem formatada para o WhatsApp
+            const message = `Olá! Gostaria de confirmar minha presença no aniversário de 10 anos da Helena! ✨🎩🎉\n\n` +
+                            `👤 *Nome do Convidado:* ${name}\n` +
+                            `👥 *Quantidade de pessoas:* ${count}\n` +
+                            `🔑 *Código do convite:* ${code.toUpperCase()}\n\n` +
+                            `Mal posso esperar por essa festa mágica! ☕🎂`;
+
+            // Codificar texto para URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Gerar URL do WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+
+            // Abrir em nova aba/aplicativo do WhatsApp
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
